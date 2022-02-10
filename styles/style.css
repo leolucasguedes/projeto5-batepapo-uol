@@ -36,6 +36,48 @@ main{
     height: 443px;
 }
 
+main > ul{
+    width: 375px;
+}
+
+.mensagens li {
+    width: 375px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .message-box{
+      width: 375px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      background-color: #DCDCDC;
+      border-radius: 2px;
+  }
+
+  .message-box > p{
+      color: #AAAAAA;
+      margin: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 16.41px;
+  }
+
+  b{
+      font-size: 14px;
+      margin: 2px;
+      font-weight: bold;
+  }
+
+  span{
+      font-size: 14px;
+      font-weight: 400;
+    
+  }
+
 footer{
     width: 375px;
     height: 80px;
@@ -53,7 +95,7 @@ footer > input{
     border: none;
 }
 
-input[type="text"]{
+footer > input[type="text"]{
     font-size:18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -64,4 +106,135 @@ input[type="text"]{
 
 footer > ion-icon{
     font-size: 26px;
+}
+
+         /* nav */
+nav{
+    width: 259px;
+    height: 667px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.nav-titulo-box{
+    width: 259px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18.75px;
+    color: #000000; 
+    margin: 0 45px;
+}
+
+span{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18.75px;
+    color: #000000;  
+}
+
+div > ion-icon{
+    font-size: 24px;
+    margin: 0 10px;
+}
+.pessoa1{
+    width: 259px;
+    height: 36px;
+}
+
+.pessoa2{
+    width: 259px;
+    height: 36px;
+}
+
+.pessoa3{
+    width: 259px;
+    height: 36px;
+}
+
+.text-visibility{
+    width: 259px;
+    margin: 20px 55px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18.75px;
+    color: #000000; 
+}
+
+.status1{
+    width: 259px;
+    height: 36px;
+}
+
+.status2{
+    width: 259px;
+    height: 36px;
+}
+
+.escondido{
+    display: none;
+}
+
+
+
+
+         /* página de entrada */
+
+section > img{
+    width: 130px;
+    height: 92px;
+    margin-top: 72px;
+    margin-left: 122px;
+
+}
+
+.input-box{
+    margin-left: 57px;
+    margin-top: 94px;
+}
+
+.input-box > input{
+    width: 260px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box > input[type="text"]{
+    font-size:18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+    color: #AEAEAE;
+}
+
+section > button{
+    width: 109px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 133px;
+    border: none;
+    border-radius: 9px;
+    background-color: #E7E7E7;
+}
+
+section > button[type="text"]{
+    font-size: 20px;
+    color: #E7E7E7;
 }
