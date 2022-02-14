@@ -22,9 +22,9 @@
   <body>
     <header>
       <img src="images/logo 1.png" />
-      <ion-icon name="people"></ion-icon>
+      <ion-icon name="people" onclick="aparecerNav()"></ion-icon>
     </header>
-    <nav class="escondido">
+    <nav class="escondido" onclick="sumirNav()">
       <div class="nav-titulo-box">
         <h1>Escolha um contato para enviar mensagem:</h1>
       </div>
@@ -55,18 +55,15 @@
       </div>
     </nav>
     <main>
-      <div class="message-box">
-        <p>(09:21:45)</p>
-        <span> <b>João</b> entra na sala...</span>
-      </div>
-      <ul class="mensagens"></ul>
+      <ul id="chat" class="mensagens"></ul>
     </main>
     <footer>
-      <input type="text" value="Escreva aqui..." />
-      <ion-icon name="paper-plane-outline"></ion-icon>
+      <input type="text" name="message" placeholder="Escreva aqui..." />
+      <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
     </footer>
 
     <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -75,7 +72,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

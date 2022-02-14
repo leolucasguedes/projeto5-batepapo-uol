@@ -16,6 +16,7 @@ header{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
 }
 
 header > img{
@@ -34,23 +35,19 @@ main{
     margin-top: 106px;
     width: 375px;
     height: 443px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 main > ul{
     width: 375px;
+    height: 100%;
 }
-
-.mensagens li {
-    width: 375px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
 
   .message-box{
       width: 375px;
-      height: 40px;
+      min-height: 40px;
       display: flex;
       align-items: center;
       background-color: #DCDCDC;
@@ -66,13 +63,69 @@ main > ul{
       line-height: 16.41px;
   }
 
-  b{
-      font-size: 14px;
-      margin: 2px;
-      font-weight: bold;
-  }
+article {
+    display: flex;
+    align-items: center;
+    height: auto;
+    margin-bottom: 4px;
+}
 
-  span{
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow: hidden;
+}
+
+.msg-enter-exit {
+    background-color: #DCDCDC;
+    width: 375px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.msg-all {
+    background-color: #FFFFFF;
+    width: 375px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.msg-pvt {
+    background-color: #FFDEDE;
+    width: 375px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+p span {
+    margin-right: 5px;
+    color: #AAAAAA;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-left: 8px;
+    word-wrap: break-word;
+}
+
+strong {
+    font-weight: 700;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+span{
       font-size: 14px;
       font-weight: 400;
     
@@ -87,6 +140,7 @@ footer{
     display: flex;
     align-items: center;
     box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.05);
+    background-color: #FFFFFF;
 }
 
 footer > input{
@@ -189,8 +243,6 @@ div > ion-icon{
 .escondido{
     display: none;
 }
-
-
 
 
          /* página de entrada */
