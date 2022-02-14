@@ -164,3 +164,5 @@ function sumirNav(){
     const sumir = document.querySelector("nav");
     sumir.classList.add("escondido");
 }
+
+//valeu vini, agr ta formatado direitinho
