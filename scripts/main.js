@@ -1,7 +1,7 @@
 let chat = document.querySelector("#chat");
 let logged = false;
 
-let nomeUsuario;
+let nomeUsuario = '';
 let participants = [];
 let messages = [];
 
@@ -12,7 +12,7 @@ let lastMessageArray = null;
 
 //usuario
 function pedirNomeUsuario(){
-    let nomeUsuario = prompt("Escolha um nome de Usuário");
+    nomeUsuario = prompt("Escolha um nome de Usuário");
     const promisse = axios.post(`https://mock-api.driven.com.br/api/v4/uol/participants`,{
      name: `${nomeUsuario}` 
  })
@@ -20,6 +20,7 @@ function pedirNomeUsuario(){
          logged = true;
          getParticipants();
          getMessages();
+         setInterval(checkIfUserOnline, 5000);
      })
      promisse.catch(error => {
          alert("Esse nome já está em uso, escolha outro ou aguarde.");
@@ -42,7 +43,6 @@ function isOffline(error) {
     pedirNomeUsuario();
 }
 
-setInterval(() => checkIfUserOnline(nomeUsuario), 5000);
     getMessages();
     setInterval(getMessages, 3000);
 
@@ -118,6 +118,38 @@ lastElement.scrollIntoView();
 function didntGetMessages(error) {
 console.log(error);
 alert("Houve um problema com as mensagens, tente reiniciar");
+}
+
+function postMessage() {
+    const messagePost = document.querySelector("footer input").value;
+    const messageTo = document.querySelector(".usersAll .check").parentNode.querySelector("span").innerHTML;
+
+    const messageVisibility = document.querySelector(".check").parentNode.querySelector("span").innerHTML;
+    let messageType;
+
+    if (messageVisibility === "Público") {
+        messageType = "message";
+    } else if (messageVisibility === "Reservadamente") {
+        messageType = "private_message";
+    }
+
+    const objectPost = {
+        from: username,
+        to: messageTo,
+        text: messagePost,
+        type: messageType
+    };
+
+    const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages", objectPost);
+    promise.then(postMessageOK);
+    promise.catch(() => {
+        alert("Houve algum erro com a menssagem digitada, tente de novo");
+    });
+}
+
+function postMessageOK(response) {
+    const messagePost = document.querySelector("footer input").value = '';
+    getMessages();
 }
 
 

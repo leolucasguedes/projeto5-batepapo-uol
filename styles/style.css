@@ -128,8 +128,20 @@ strong {
 span{
       font-size: 14px;
       font-weight: 400;
-    
   }
+
+.check {
+    display: inline;
+    color: var(--color-check);
+    padding-right: 27px;
+}
+
+.usersAll {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    overflow-y: scroll;
+}
 
 footer{
     width: 375px;

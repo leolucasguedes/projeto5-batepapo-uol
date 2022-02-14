@@ -59,7 +59,11 @@
     </main>
     <footer>
       <input type="text" name="message" placeholder="Escreva aqui..." />
-      <ion-icon name="paper-plane-outline" onclick="sendMessage()"></ion-icon>
+      <ion-icon
+        name="paper-plane-outline"
+        onclick="postMessage()"
+        data-identifier="send-message"
+      ></ion-icon>
     </footer>
 
     <!--scripts-->
